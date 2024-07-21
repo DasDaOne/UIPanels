@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIPanelsController : Singleton<UIPanelsController>
 {
+	[SerializeField] private MainPanelType startPanelType;
 	[SerializeField] private MainPanel[] mainPanels;
 	[SerializeField] private MiscPanel[] miscPanels;
 	[SerializeField] private UIPanel bgPanel;
@@ -40,11 +41,11 @@ public class UIPanelsController : Singleton<UIPanelsController>
 		
 		foreach (var mainPanel in mainPanels)
 		{
-			if(mainPanel.panelType != MainPanelType.MainMenu)
+			if(mainPanel.panelType != startPanelType)
 				mainPanel.uiPanel.Hide(false, false);
 		}
 		
-		mainPanels.First(x => x.panelType == MainPanelType.MainMenu).uiPanel.Show(false, false);
+		mainPanels.First(x => x.panelType == startPanelType).uiPanel.Show(false, false);
 	}
 	
 	private void OnEnable()
