@@ -8,9 +8,9 @@ Requires DoTween for animations to work
   - Download and add to your project [UIPanel.cs](Code/UIPanel.cs), [UIPanelsController.cs](Code/UIPanelsController.cs) and [Singleton.cs](Code/Singleton.cs)
   - Add [UIPanelsController.cs](Code/UIPanelsController.cs) to your Canvas on scene (it doesnt have to be on canvas, its just a habit of mine)
   - Create and layout a panel (For example Main Menu panel)
-  - Add your panel to UIPanelsController's [MainPanelType](Code/UIPanelsController.cs/#L98) enum
+  - Add your panel to UIPanelsController's [MainPanelType](Code/UIPanelsController.cs/#L99) enum
   - Add your panel, aswell as the type of it into UIPanelsController's mainPanel list in your scene
-  - Invoke [ShowMainPanel](Code/UIPanelsController.cs/#L66) method to show panel
+  - Invoke [ShowMainPanel](Code/UIPanelsController.cs/#L67) method to show panel
 
 # Notes
   - There is 2 types of panels, Main Panels and Misc Panels, the difference is that Misc Panels will try to open BackgroundPanel with them (for example background blur, darkening)
